@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Intramurals — OBMC</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root{
+          
+            --bg: rgba(255,240,230,0.8);              
+            --card: rgba(255,240,230,0.85);
+            --accent: #b22222;         
+            --accent-600: #800000;     
+            --muted: #4a1a1a;
+            --soft-border: rgba(88,64,45,0.14);
+            --shadow: 0 18px 40px rgba(30,35,40,0.09);
+            --success: #2f8f5a;
+            --input-bg: #fffaf6;
+        }
+         html,body{height:100%;margin:0}
+          body{font-family:Inter,system-ui,Arial;background:url('3.png') no-repeat center center fixed;background-size:cover;line-height:1.5;color:var(--muted);}
+          .btn{background:var(--accent-600);color:#fff;border:0;padding:12px 18px;border-radius:10px;font-weight:700;transition:all .2s;display:inline-block}
+            .btn:hover{background:#8f6a1f;color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(173,128,48,0.15)}
+          
+         body {
+            padding-top: 70px; 
+        }
+        .container-center {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:100vh;
+            padding:0 20px;
+            box-sizing:border-box;
+        }
+        .box {
+            border-radius:16px;
+            padding:36px 40px;
+            background: var(--card);
+            box-shadow:0 20px 50px rgba(30,35,40,0.08), 0 0 0 1px var(--soft-border);
+            max-width:420px;
+            width:100%;
+            text-align:center;
+            transition:transform .25s ease, box-shadow .25s ease;
+        }
+        .box:hover{transform:translateY(-3px);box-shadow:0 30px 70px rgba(30,35,40,0.12)}
+        .box h2{margin:0 0 18px 0;color:var(--accent-600);font-size:22px;font-weight:700}
+            #playerList{white-space:pre-wrap;margin-top:8px;color:var(--muted);text-align:center}
+            #playerList .list-wrap{background:var(--card);padding:6px;border-radius:8px;border:1px solid rgba(172,136,80,0.06);display:inline-block;max-width:360px;width:auto}
+            #playerList .player-item{padding:4px 6px;border-radius:4px;margin-bottom:4px;background:transparent;color:var(--muted);text-align:center;font-size:14px;line-height:1.4}
+        .navbar {
+            background: var(--card) !important;
+            border-bottom: 1px solid var(--soft-border);
+            box-shadow: var(--shadow);
+            padding: 0.5rem 1rem;
+        }
+        .navbar-brand {
+            color: var(--accent-600) !important;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .navbar-nav .nav-link {
+            color: var(--muted) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link:focus {
+            color: var(--accent-600) !important;
+            background: rgba(212,162,74,0.1);
+            border-radius: 0.25rem;
+        }
+        .navbar-toggler {
+            border-color: var(--soft-border);
+        }
+        .navbar-toggler-icon {
+            filter: invert(20%);
+        }
+
+                </style>
+              </head>
+              <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">OBMC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project2ndpage.html">Team Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projectPage3.html">Team Players</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="container-center">
+                  <div class="box">
+                    <h2 style="margin-top:0; margin-bottom:20px; color: var(--accent-600);">See Teammates</h2>
+                    <button type="button" class="btn" style="width:100%;margin-top:8px;" py-click="add_player">Click Here</button>
+                    <div id="playerList"></div>
+                  </div>
+                </div>
+                <script type="py" src="Projectpage3.py"></script>
+              </body>
+            </html>`
